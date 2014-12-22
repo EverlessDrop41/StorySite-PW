@@ -25,18 +25,18 @@ p {
     font-family: 'Noto Sans', sans-serif;
 }
 
-.pLeft {
-    width: 70%;
-    float: left;
-}
-
-.imgRight {
-    width: 28%;
+.pRight {   
     float: right;
 }
 
+.imgLeft {
+    width: 20%;
+    padding-right: 1%;
+    float: left;
+}
+
 #Titlebox {
-    z-index: 2;
+    z-index: 10;
     position: relative;
     width: 98%;
     padding-left: 1%;
@@ -46,28 +46,37 @@ p {
     font-family: 'Noto Sans', sans-serif;
     color: #FAFAFA;
     height: 14vh;
-    box-shadow: 1px 1px 5px #888888
+    box-shadow: 0px 2px 5px #888888;
+    overflow:hidden;
 }
 
-#NavBox {
+#SideBar {
     position: relative;
-    z-index: 0;
+    z-index: 5;
     height: 86vh;
-    width: 20%;
+    width: 15%;
     float: left;
     background-color: #CFD8DC;
     display: inline-block;
     color: #212121;
     font-family: 'Noto Serif', sans-serif;
+    opacity: 50%;
 }
 
-#NavBox ul {
+#SideBar ul {
+    padding-left: 10px;
     list-style-type: none;
+    list-style-image: none;
     line-height: 1.5em;
 }
 
+#Copyright {
+}
+
 #Content {
-    width:78%;
+    position: relative;
+    z-index: 7;
+    width:83.7%;
     padding-left: 0.5%;
     padding-right: 0.5%;
     height: 85vh;
