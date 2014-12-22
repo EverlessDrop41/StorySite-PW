@@ -3,13 +3,17 @@ var contentWidth = "83.7%";
 var contentResize = true;
 
 $(document).ready(function(){
-    //
-    //MultiScreen Sizing
-    if(screen.innerWidth <= 800){
-        
-    }
+    $(window).resize(function() {
+        $("#SideBar").height(window.innerHeight - $("#Titlebox").height());
+        $("#Content").height((window.innerHeight - $("#Titlebox").height()) - (window.innerHeight/100));
+        $("#SideToggle").height($("#Titlebox").height());
+        $("#SideToggle").width($("#SideToggle").height());
+        $("#Titlebox").css({textIndent: $("#SideToggle").width()})
+    });
     
-    $("#Titlebox").click(function(){
+    $(window).resize();
+    
+    $("#SideToggle").click(function(){
         if (sidebarOut){
             $("#SideBar").hide("slide", { direction: "left" }, 500,function(){
                 if (contentResize){
